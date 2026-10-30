@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html.Tagları</title>
+
+    <style>
+    /* Genel Sayfa Tasarımı */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f6;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* Ana Konteyner */
+    main, header, footer {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    header {
+        text-align: center;
+        background: #2c3e50;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+
+    /* Bölüm Kartları */
+    section {
+        background: #fdfdfd;
+        border-left: 5px solid #3498db;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    h2 {
+        color: #2c3e50;
+        margin-top: 0;
+    }
+
+    /* Kod Vurguları */
+    strong {
+        color: #e74c3c;
+    }
+
+    /* Bağlantı (Link) Tasarımı */
+    a {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        padding: 10px 18px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    a:hover {
+        background-color: #2980b9;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #7f8c8d;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+    <!-- Başlık Alanı -->
+    <header>
+        <h1>HTML Etiket Rehberi</h1>
+        <p>En çok kullanılan HTML etiketleri ve kullanım örnekleri</p>
+    </header>
+
+    <hr>
+
+    <!-- Ana İçerik -->
+    <main>
+        <!-- 1. Temel Metin Etiketleri -->
+        <section>
+            <h2>1. Metin Etiketleri</h2>
+            <p>Bu bir paragraf etiketidir (<strong>&lt;p&gt;</strong>). Metinleri yazmak için kullanılır.</p>
+            <p><strong>&lt;strong&gt;</strong> etiketi metni koyu yapar, <em>&lt;em&gt;</em> etiketi ise yatık (eğik) yapar.</p>
+        </section>
+
+        <!-- 2. Başlık Etiketleri -->
+        <section>
+            <h2>2. Başlık Etiketleri (&lt;h1&gt; - &lt;h6&gt;)</h2>
+            <p>Arama motorları ve sayfa düzeni için başlık hiyerarşisi çok önemlidir:</p>
+            <h1>h1: En büyük başlık (Sayfada 1 tane olmalı)</h1>
+            <h2>h2: Alt başlık</h2>
+            <h3>h3: Daha küçük alt başlık</h3>
+        </section>
+
+        <!-- 3. Liste Etiketleri -->
+        <section>
+            <h2>3. Liste Etiketleri</h2>
+            <h3>Sırasız Liste (&lt;ul&gt;)</h3>
+            <ul>
+                <li>Maddeli liste öğesi (&lt;li&gt;)</li>
+                <li>Başka bir madde</li>
+            </ul>
+
+            <h3>Sıralı Liste (&lt;ol&gt;)</h3>
+            <ol>
+                <li>Numaralı 1. adım</li>
+                <li>Numaralı 2. adım</li>
+            </ol>
+        </section>
+
+        <!-- 4. Bağlantı ve Görsel -->
+        <section>
+            <h2>4. Bağlantı ve Medya</h2>
+            <p>Bir web sitesine link vermek için <strong>&lt;a&gt;</strong> etiketi kullanılır:</p>
+            <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs Sitemizi Ziyaret Edin</a>
+        </section>
+
+        <!-- 5. Tablo Etiketleri -->
+        <section>
+            <h2>5. Tablo Etiketleri (&lt;table&gt;)</h2>
+            <p>Verileri satır ve sütun halinde düzenlemek için kullanılır:</p>
+            <table border="1" style="width:100%; border-collapse: collapse; text-align: left; padding: 8px;">
+                <tr>
+                    <th>Etiket</th>
+                    <th>Açıklama</th>
+                </tr>
+                <tr>
+                    <td><strong>&lt;table&gt;</strong></td>
+                    <td>Tablonun tamamını kapsar.</td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;tr&gt;</strong></td>
+                    <td>Tabloda yeni bir satır (TableRow) oluşturur.</td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;td&gt;</strong></td>
+                    <td>Tablo hücresi (TableData) verilerini tutar.</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 6. Form ve Kullanıcı Girdileri -->
+        <section>
+            <h2>6. Form Etiketleri (&lt;form&gt;)</h2>
+            <p>Kullanıcıdan veri almak (giriş, kayıt vb.) için kullanılır:</p>
+            <form>
+                <label>Kullanıcı Adı:</label><br>
+                <input type="text" placeholder="Adınızı girin" style="padding: 5px; margin-bottom: 10px;"><br>
+                
+                <label>Şifre:</label><br>
+                <input type="password" placeholder="Şifreniz" style="padding: 5px; margin-bottom: 10px;"><br>
+                
+                <button type="submit" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">Giriş Yap</button>
+            </form>
+        </section>
+
+        <!-- 7. Görsel ve Medya Etiketleri -->
+        <section>
+            <h2>7. Medya Etiketleri</h2>
+            <p>Sayfaya görsel eklemek için <strong>&lt;img&gt;</strong> etiketi kullanılır:</p>
+            <p><em>Örnek Kullanım:</em> &lt;img src="resim.jpg" alt="Açıklama"&gt;</p>
+            <p>Not: <code>src</code> kısmı dosya yolunu, <code>alt</code> kısmı ise görsel yüklenemediğinde görünecek yazıyı belirtir.</p>
+        </section>
+
+        <!-- 8. Yapısal Blok Etiketleri -->
+        <section>
+            <h2>8. Blok ve Satır İçi Etiketler</h2>
+            <p><strong>&lt;div&gt;:</strong> İçeriği gruplamak için kullanılan blok seviyesinde bir kapsayıcıdır.</p>
+            <p><strong>&lt;span&gt;:</strong> Cümle içindeki küçük metin parçalarını hedef almak için kullanılan satır içi (inline) etikettir.</p>
+        </section>
+
+        <!-- 9. Çoklu Ortam (Video ve Ses) Etiketleri -->
+        <section>
+            <h2>9. Video ve Ses Etiketleri (&lt;video&gt; / &lt;audio&gt;)</h2>
+            <p>Web sayfasına harici oynatıcı eklemeden video veya ses dosyası gömmek için kullanılır:</p>
+            <p><strong>&lt;video controls&gt;</strong>: Oynatıcı kontrolleriyle (oynat, durdur, ses) birlikte video ekler.</p>
+            <p><strong>&lt;audio controls&gt;</strong>: Sayfaya ses dosyası (müzik, podcast) ekler.</p>
+        </section>
+
+        <!-- 10. Semantik (Anlamlı) HTML Etiketleri -->
+        <section>
+            <h2>10. Semantik Bölümleme Etiketleri</h2>
+            <p>Arama motorlarının ve ekran okuyucuların sayfayı daha iyi anlaması için modern etiketler kullanılır:</p>
+            <ul>
+                <li><strong>&lt;article&gt;:</strong> Blog yazısı veya haber gibi bağımsız içerikleri tanımlar.</li>
+                <li><strong>&lt;section&gt;:</strong> Sayfa içinde mantıksal birbiriyle ilişkili bölümleri gruplar.</li>
+                <li><strong>&lt;aside&gt;:</strong> Kenar çubuğu (sidebar) veya ana içerikle dolaylı ilişkili ek bilgileri barındırır.</li>
+            </ul>
+        </section>
+
+        <!-- 11. Liste ve Açıklama Etiketleri -->
+        <section>
+            <h2>11. Açıklama Listesi (&lt;dl&gt;)</h2>
+            <p>Terimler ve açıklamaları listelemek için özel bir etiket grubudur:</p>
+            <dl>
+                <dt><strong>&lt;dt&gt; (Definition Term):</strong></dt>
+                <dd>Tanımlanan terimi belirtir.</dd>
+                <dt><strong>&lt;dd&gt; (Definition Description):</strong></dt>
+                <dd>Terimin açıklamasını yapar.</dd>
+            </dl>
+        </section>
+
+        <!-- 12. Satır İçi Biçimlendirme ve Ayırıcılar -->
+        <section>
+            <h2>12. Olmazsa Olmaz Pratik Etiketler</h2>
+            <p><strong>&lt;br&gt; (Break):</strong> Metin içinde alt satıra geçmek (satır kırmak) için kullanılır. Kapanış etiketi yoktur.</p>
+            <p><strong>&lt;hr&gt; (Horizontal Rule):</strong> Sayfa içerisine yatay bir ayırıcı çizgi çeker.</p>
+            <p><strong>&lt;blockquote&gt;:</strong> Başka bir kaynaktan yapılan uzun alıntıları belirtmek için kullanılır, genelde sağa/sola indentli (girintili) durur.</p>
+            <p><strong>&lt;code&gt;:</strong> Sayfada kod parçacıklarını göstermek için (monospace fontla) kullanılır.</p>
+        </section>
+
+        <!-- 13. Metin İçi Vurgu ve Detaylar -->
+        <section>
+            <h2>13. Detay ve İnce Ayar Etiketleri</h2>
+            <p><strong>&lt;mark&gt;:</strong> Metin üzerinde fosforlu kalemle çizilmiş gibi sarı arkaplanla vurgu yapar.</p>
+            <p><strong>&lt;del&gt; (Deleted):</strong> Üstü çizili metin oluşturmak için kullanılır (örn: <del>Eski fiyat</del>).</p>
+            <p><strong>&lt;ins&gt; (Inserted):</strong> Sonradan eklenen/güncellenen metinlerin altını çizer.</p>
+            <p><strong>&lt;sub&gt; ve &lt;sup&gt;:</strong> Alt simge (H<sub>2</sub>O) ve üst simge (X<sup>2</sup>) yazmak için kullanılır.</p>
+        </section>
+        
+    </main>
+
+    <hr>
+
+    <!-- Alt Bilgi -->
+    <footer>
+        <p>© 2026 HTML Rehberi projesi</p>
+    </footer>
+
+</body>
+</html>
+</body>
+</html>
